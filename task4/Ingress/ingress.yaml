@@ -11,8 +11,8 @@ spec:
       - path: /
         pathType: Prefix
         backend:
-            serviceName: spring-chat-service
-            servicePort: 80
+          serviceName: spring-chat-service
+          servicePort: 80
   - http:
       paths:
       - path: /login
