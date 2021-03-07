@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-chat-deployment
+  name: spring-login-deployment
   labels:
     app: {{ .Values.app}}
 spec:
