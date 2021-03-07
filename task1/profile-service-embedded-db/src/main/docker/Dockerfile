@@ -17,4 +17,4 @@ ADD ./target/profile-embedded-0.1.0.jar /
 CMD ["java -cp profile-embedded-0.1.0.jar"]
 
 # Use Bash as the container's entry point.
-ENTRYPOINT ["/bin/bash", "-c"]
+ENTRYPOINT ["/bin/sh", "-c"]
