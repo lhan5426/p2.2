@@ -10,15 +10,18 @@ spec:
   rules:
   - http:
       paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          serviceName: spring-chat-service
+          servicePort: 80
       - path: /login
+        pathType: Prefix
         backend:
           serviceName: spring-login-service
           servicePort: 80
       - path: /profile
+        pathType: Prefix
         backend:
           serviceName: spring-profile-service
-          servicePort: 80
-      - path: /
-        backend:
-          serviceName: spring-chat-service
           servicePort: 80
