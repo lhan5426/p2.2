@@ -1,5 +1,5 @@
 username: "clouduser"
-password: "9Gabite9"
+password: "9Gabite9!"
 app: "spring-login-service"
 num_rep: 3
 image: "us.gcr.io/gcp-docker-kubernetes-69420/chatservice:v001"
