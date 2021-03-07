@@ -2,10 +2,10 @@
     "referenceGuide" : "Cite all the reference sources in the required format. Proper citations will help you avoid unnecessary trouble. Read JSON grammar from Internet if needed.",
     "websites":[  
         {  
-            "title":"<title of the page>",
-            "url":"<url>",
-            "code":"<in which code you use the snippet or the idea>",
-            "description":"<additional information you find it necessary to provide>"
+            "title":"helm/charts",
+            "url":"https://github.com/helm/charts/tree/master/stable/mysql/templates",
+            "code":"Formatted much of my yaml files based on sample code",
+            "description":""
         }
     ],
     "collaborators":[
