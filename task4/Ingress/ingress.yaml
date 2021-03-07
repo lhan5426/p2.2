@@ -11,21 +11,19 @@ spec:
       - path: /
         pathType: Prefix
         backend:
-          resource:
-            name: spring-chat-service
-            port:
-              number: 80
+            serviceName: spring-chat-service
+            servicePort: 80
+  - http:
+      paths:
       - path: /login
         pathType: Exact
         backend:
-          resource:
-            name: spring-login-service
-            port:
-              number: 80
+          serviceName: spring-login-service
+          servicePort: 80
+  - http:
+      paths:
       - path: /profile
         pathType: Exact
         backend:
-          resource:
-            name: spring-profile-service
-            port:
-              number: 80
+          serviceName: spring-profile-service
+          servicePort: 80
