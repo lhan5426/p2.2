@@ -1,8 +1,8 @@
 username: "clouduser"
 password: "9Gabite9"
-app: "spring-profile-service"
+app: "profile-service"
 num_rep: 3
 image: "us.gcr.io/gcp-docker-kubernetes-69420/profileservice:v003"
 cport: 8080
 port: 80
-assoc_name: "spring-profile-service"
+assoc_name: "profile-service"
