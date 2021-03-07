@@ -4,7 +4,7 @@ metadata:
   name: spring-profile-config
 data:
   # update MySQL environment variables for the profile service
-  MYSQL_DB_HOST: 'mysql-profile.default.svc.cluster.local'
-  MYSQL_DB_USER: 'clouduser'
-  MYSQL_DB_PASSWORD: '9Gabite9'
-  MYSQL_DB_PORT: '3306'
+  mysql_db_host: 'mysql-profile.default.svc.cluster.local'
+  mysql_db_user: 'clouduser'
+  mysql_db_password: '9Gabite9'
+  mysql_db_port: '3306'
