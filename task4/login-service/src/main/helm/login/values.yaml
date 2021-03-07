@@ -1,8 +1,8 @@
 username: "clouduser"
 password: "9Gabite9"
-app: "chat-service"
+app: "login-service"
 num_rep: 3
 image: "us.gcr.io/gcp-docker-kubernetes-69420/chatservice:v001"
 cport: 8080
 port: 80
-assoc_name: "chat-service"
+assoc_name: "login-service"
