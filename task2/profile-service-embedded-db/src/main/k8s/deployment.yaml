@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: spring-profile-deployment
   labels:
-    app: spring-profile
+    app: profile-service
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: spring-profile
+      app: profile-service
   template:
     metadata:
       labels:
-        app: spring-profile
+        app: profile-service
     spec:
       containers:
         - name: spring-profile-app
