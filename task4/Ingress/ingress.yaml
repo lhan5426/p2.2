@@ -2,28 +2,26 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: service-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - http:
       paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          serviceName: spring-chat-service
-          servicePort: 80
-  - http:
-      paths:
       - path: /login
-        pathType: Exact
+        pathType: Prefix
         backend:
           serviceName: spring-login-service
           servicePort: 80
   - http:
       paths:
       - path: /profile
-        pathType: Exact
+        pathType: Prefix
         backend:
           serviceName: spring-profile-service
           servicePort: 80
+  - http:
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            serviceName: spring-chat-service
+            servicePort: 80
