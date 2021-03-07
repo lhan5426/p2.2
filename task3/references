@@ -4,15 +4,21 @@
         {  
             "title":"helm/charts",
             "url":"https://github.com/helm/charts/tree/master/stable/mysql/templates",
-            "code":"Formatted much of my yaml files based on sample code",
+            "code":"Formatted some parts of my yaml files based on sample code",
+            "description":"Needed clarification on purpose of values.yaml"
+        },
+        {
+            "title":"ConfigMaps",
+            "url":"https://kubernetes.io/docs/concepts/configuration/configmap/",
+            "code":"Modeled getting env var in deployment off of example",
             "description":""
         }
     ],
     "collaborators":[
         {
-            "andrewId":"<collaborator andrewId>",
-            "collaborationType":"<I helped X, X helped me, or we helped each other>",
-            "description":"<describe the idea you shared>"
+            "andrewId":"n/a",
+            "collaborationType":"n/a",
+            "description":"n/a"
         }
     ]
 }
