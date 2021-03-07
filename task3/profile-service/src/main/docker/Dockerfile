@@ -14,7 +14,7 @@ ADD ./target/profile-service-0.1.0.jar /
 # Note that the filepath of the JAR is `/demo-1.0-SNAPSHOT-jar-with-dependencies.jar`
 # as in the filesystem of the image,
 # NOT `./target/demo-1.0-SNAPSHOT-jar-with-dependencies.jar` as in the host filesystem
-CMD ["java -jar profile-service-0.1.0.jar"]
+CMD ["java  -jar profile-service-0.1.0.jar"]
 
 # Use Bash as the container's entry point.
 ENTRYPOINT ["/bin/sh", "-c"]
