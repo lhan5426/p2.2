@@ -15,7 +15,7 @@ spec:
         app: profile-service
     spec:
       containers:
-        - name: spring-profile-app
-          image: profile-embedded-0.1.0.jar
+        - name: profile-service
+          image: us.gcr.io/gcp-docker-kubernetes-69420/profileservice:v001
           ports:
             - containerPort: 8080
