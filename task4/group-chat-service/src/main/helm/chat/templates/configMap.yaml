@@ -10,6 +10,6 @@ data:
   # update endpoints for multi-cloud in task5
   LIST_OF_PROFILE_ENDPOINTS: 'spring-profile-service.default.svc.cluster.local'
   MYSQL_DB_HOST: 'mysql-chat.default.svc.cluster.local'
-  MYSQL_DB_USER: 'your_user_name'
-  MYSQL_DB_PASSWORD: 'your_db_password'
+  MYSQL_DB_USER: 'clouduser'
+  MYSQL_DB_PASSWORD: '9Gabite9!'
   MYSQL_DB_PORT: '3306'
