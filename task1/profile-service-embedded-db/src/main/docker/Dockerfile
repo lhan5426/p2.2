@@ -16,5 +16,5 @@ ADD ./target/profile-embedded-0.1.0.jar /
 # NOT `./target/demo-1.0-SNAPSHOT-jar-with-dependencies.jar` as in the host filesystem
 CMD ["java -jar profile-embedded-0.1.0.jar"]
 
-# Use Bash as the container's entry point.
+# Use sh as the container's entry point.
 ENTRYPOINT ["/bin/sh", "-c"]
