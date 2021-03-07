@@ -1,1 +1,21 @@
-pee
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: spring-profile-deployment
+  labels:
+    app: spring-profile
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: spring-profile
+  template:
+    metadata:
+      labels:
+        app: spring-profile
+    spec:
+      containers:
+        - name: spring-profile-app
+          image: profile-embedded-0.1.0.jar
+          ports:
+            - containerPort: 8080
