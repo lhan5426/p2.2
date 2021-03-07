@@ -19,7 +19,7 @@ spec:
           serviceName: spring-profile-service
           servicePort: 80
       - path: /
-        pathType: Prefix
+        pathType: Exact
         backend:
           serviceName: spring-chat-service
           servicePort: 80
