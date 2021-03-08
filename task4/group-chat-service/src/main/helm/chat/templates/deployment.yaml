@@ -40,9 +40,4 @@ spec:
                 configMapKeyRef:
                   name: spring-chat-config
                   key: mysql_db_port
-            - name: LIST_OF_PROFILE_ENDPOINTS
-              valueFrom:
-                configMapKeyRef:
-                  name: spring-chat-config
-                  key: list_of_profile_endpoints
 
