@@ -40,6 +40,11 @@ spec:
                 configMapKeyRef:
                   name: spring-login-config
                   key: mysql_db_port
+            - name: SPRING_REDIS_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-login-config
+                  key: spring_redis_port
             - name: CHAT_ENDPOINT
               valueFrom:
                 configMapKeyRef:
