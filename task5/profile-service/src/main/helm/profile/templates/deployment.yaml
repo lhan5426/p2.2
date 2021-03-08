@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-profile-deployment
+  labels:
+    app: {{ .Values.app}}
+spec:
+  replicas: {{ .Values.num_rep}}
+  selector:
+    matchLabels:
+      app: {{ .Values.app}}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app}}
+    spec:
+      containers:
+        - name: {{ .Values.assoc_name}}
+          image: {{ .Values.image}}
+          ports:
+            - containerPort: {{ .Values.cport}}
+          env:
+            - name: MYSQL_DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-profile-config
+                  key: mysql_db_host
+            - name: MYSQL_DB_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-profile-config
+                  key: mysql_db_user
+            - name: MYSQL_DB_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-profile-config
+                  key: mysql_db_password
+            - name: MYSQL_DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-profile-config
+                  key: mysql_db_port
+

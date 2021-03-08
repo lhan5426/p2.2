@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-login-deployment
+  labels:
+    app: {{ .Values.app}}
+spec:
+  replicas: {{ .Values.num_rep}}
+  selector:
+    matchLabels:
+      app: {{ .Values.app}}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app}}
+    spec:
+      containers:
+        - name: {{ .Values.assoc_name}}
+          image: {{ .Values.image}}
+          ports:
+            - containerPort: {{ .Values.cport}}
+          env:
+            - name: MYSQL_DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-login-config
+                  key: mysql_db_host
+            - name: MYSQL_DB_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-login-config
+                  key: mysql_db_user
+            - name: MYSQL_DB_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-login-config
+                  key: mysql_db_password
+            - name: MYSQL_DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-login-config
+                  key: mysql_db_port
+            - name: SPRING_REDIS_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-login-config
+                  key: spring_redis_host
+            - name: SPRING_REDIS_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-login-config
+                  key: spring_redis_password
+            - name: SPRING_REDIS_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-login-config
+                  key: spring_redis_port
+            - name: CHAT_ENDPOINT
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-login-config
+                  key: chat_endpoint
+
+
