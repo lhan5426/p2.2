@@ -2,7 +2,7 @@ username: "clouduser"
 password: "9Gabite9"
 app: "spring-login-service"
 num_rep: 3
-image: "us.gcr.io/gcp-docker-kubernetes-69420/chatservice:v001"
+image: "us.gcr.io/gcp-docker-kubernetes-69420/loginservice:v001"
 cport: 8080
 port: 80
 assoc_name: "spring-login-service"
