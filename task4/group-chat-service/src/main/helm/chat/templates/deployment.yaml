@@ -40,4 +40,29 @@ spec:
                 configMapKeyRef:
                   name: spring-chat-config
                   key: mysql_db_port
+            - name: SPRING_REDIS_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-chat-config
+                  key: spring_redis_host
+            - name: SPRING_REDIS_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-chat-config
+                  key: spring_redis_password
+            - name: SPRING_REDIS_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-chat-config
+                  key: spring_redis_port
+            - name: RAW_TOPIC_MESSAGE
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-chat-config
+                  key: raw_topic_message
+            - name: LIST_OF_PROFILE_ENDPOINTS
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-chat-config
+                  key: list_of_profile_endpoints
 

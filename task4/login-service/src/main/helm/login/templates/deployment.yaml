@@ -23,21 +23,27 @@ spec:
             - name: MYSQL_DB_HOST
               valueFrom:
                 configMapKeyRef:
-                  name: spring-profile-config
+                  name: spring-login-config
                   key: mysql_db_host
             - name: MYSQL_DB_USER
               valueFrom:
                 configMapKeyRef:
-                  name: spring-profile-config
+                  name: spring-login-config
                   key: mysql_db_user
             - name: MYSQL_DB_PASSWORD
               valueFrom:
                 configMapKeyRef:
-                  name: spring-profile-config
+                  name: spring-login-config
                   key: mysql_db_password
             - name: MYSQL_DB_PORT
               valueFrom:
                 configMapKeyRef:
-                  name: spring-profile-config
+                  name: spring-login-config
                   key: mysql_db_port
+            - name: CHAT_ENDPOINT
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-login-config
+                  key: chat_endpoint
+
 
