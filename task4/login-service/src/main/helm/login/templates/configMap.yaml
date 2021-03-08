@@ -3,6 +3,7 @@ kind: ConfigMap
 metadata:
   name: spring-login-config
 data:
+  mysql_db_host: 'mysql-profile.default.svc.cluster.local'
   mysql_db_user: 'clouduser'
   mysql_db_password: '9Gabite9!'
   mysql_db_port: '3306'
