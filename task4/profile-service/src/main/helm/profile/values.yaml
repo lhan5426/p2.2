@@ -1,5 +1,5 @@
 username: "clouduser"
-password: "9Gabite9"
+password: "9Gabite9!"
 app: "profile-service"
 num_rep: 3
 image: "us.gcr.io/gcp-docker-kubernetes-69420/profileservice:v003"
