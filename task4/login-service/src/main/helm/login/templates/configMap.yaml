@@ -3,8 +3,7 @@ kind: ConfigMap
 metadata:
   name: spring-login-config
 data:
-  LIST_OF_PROFILE_ENDPOINTS: 'spring-profile-service.default.svc.cluster.local'
-  MYSQL_DB_HOST: 'mysql-chat.default.svc.cluster.local'
-  MYSQL_DB_USER: 'clouduser'
-  MYSQL_DB_PASSWORD: '9Gabite9!'
-  MYSQL_DB_PORT: '3306'
+  mysql_db_user: 'clouduser'
+  mysql_db_password: '9Gabite9!'
+  mysql_db_port: '3306'
+  chat_endpoint: '35.237.129.65'
